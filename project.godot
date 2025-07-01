@@ -14,6 +14,18 @@ config/name="Super Anomaly Repairman"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://scenes/": "yellow"
+}
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_5="environment"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
