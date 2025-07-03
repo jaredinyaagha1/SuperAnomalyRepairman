@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy37bedf2pl32"]
+[gd_scene load_steps=5 format=3 uid="uid://cy37bedf2pl32"]
 
 [ext_resource type="Texture2D" uid="uid://br23xtw6ctyqj" path="res://assets/repair_main.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://banmm6ufhtc0i" path="res://scenes/player.gd" id="1_g2els"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -13,13 +14,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
-radius = 16.1245
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(24, 30)
 
-[node name="player" type="Area2D"]
+[node name="player" type="CharacterBody2D"]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_qhqgy")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_g2els")
