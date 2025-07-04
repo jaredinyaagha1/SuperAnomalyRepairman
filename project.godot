@@ -24,6 +24,7 @@ window/size/viewport_height=432
 
 folder_colors={
 "res://assets/": "red",
+"res://fx/": "green",
 "res://scenes/": "yellow"
 }
 
