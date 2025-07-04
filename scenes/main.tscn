@@ -1,24 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjn8qkhwcg3au"]
+[gd_scene load_steps=5 format=3 uid="uid://cjn8qkhwcg3au"]
 
 [ext_resource type="PackedScene" uid="uid://vs6e7ae8yb4t" path="res://scenes/level.tscn" id="1_0wfyh"]
-[ext_resource type="Material" uid="uid://dkk26piv3awr5" path="res://fx/palette_swap.tres" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://di71a5uiq3ptf" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cy37bedf2pl32" path="res://scenes/player.tscn" id="2_sugp2"]
-[ext_resource type="Shader" uid="uid://cj4oeu0a6gmqq" path="res://fx/palette_swap.gdshader" id="3_sugp2"]
-[ext_resource type="Texture2D" uid="uid://cy8nmr24xi7a7" path="res://assets/palettes/past.png" id="4_jyhfs"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jyhfs"]
-shader = ExtResource("3_sugp2")
-shader_parameter/palette = ExtResource("4_jyhfs")
+[ext_resource type="Script" uid="uid://b6vtjt547xfy0" path="res://scenes/camera_2d.gd" id="3_sugp2"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_jyhfs")
 
 [node name="Level" parent="." instance=ExtResource("1_0wfyh")]
-material = ExtResource("2_jyhfs")
+position = Vector2(384, -216)
 
-[node name="player" parent="." instance=ExtResource("2_sugp2")]
-material = SubResource("ShaderMaterial_jyhfs")
-position = Vector2(-176, 32)
+[node name="Player" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(736, -216)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(384, -216)
