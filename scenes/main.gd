@@ -1,6 +1,6 @@
 extends Node
 
-@onready var player = $Pdlayer
+@onready var player = $Player
 @onready var sprite2D = $Player/Sprite2D
 
 const SCREEN_HEIGHT = 432
